@@ -14,12 +14,13 @@ Sari.age
 
 struct CommodoreComputer {
     let name: String
-    let manufacturer: String
+ //   let manufacturer: String
+    let manufacturer = "Commodore"
     
-    init(name: String){
-        self.name = name
-        self.manufacturer = "Commodore"
-    }
+   // init(name: String){
+   //     self.name = name
+   //     self.manufacturer = "Commodore"
+    //}
 }
 
 let c64 = CommodoreComputer(name: "c64")
