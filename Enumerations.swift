@@ -39,9 +39,9 @@ case .hedgeHog:
     break
 }
 
-func describeAnimal(_ animal: Animals) {
+func describeAnimal(_ animal0: Animals) {
     
-    switch animal {
+    switch animal0 {
     case .cat:
         "This is a cat"
         break
@@ -80,6 +80,7 @@ case  let .wwwUrl(
 ):
     path1
     break
+    
 case .song(
     artist: let artist2,
     songName: let songName2
@@ -115,8 +116,6 @@ enum Vehicle {
         }
     }
 }
-
-
 
 
 let car = Vehicle.car(manufacturer: "Tesla", model: "X")
@@ -213,7 +212,3 @@ indirect enum IntOperation {
 
 let freeHand = IntOperation.freeHand(.add(2,4))
 freeHand.calculateResult()
-
-
-
-
