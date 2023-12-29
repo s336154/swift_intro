@@ -21,7 +21,9 @@ customAdd(11, 14, using: { (lhs: Int, rhs: Int) -> Int in lhs + rhs })
 
 customAdd(2, 4){ (lhs: Int, rhs: Int) -> Int in lhs + rhs}
 
-customAdd(2, 3){ (lhs, rhs) in lhs + rhs}
+let x = customAdd(2, 3){ (lhs, rhs) in lhs + rhs}
+x
+
 
 
 
@@ -30,9 +32,14 @@ customAdd( 20 , 30) {
 }
 
 
-let ages = [21, 34, 17, 9, 20, 40,66,23, 36]
+var ages = [21, 34, 17, 9, 20, 40,66,23, 36]
+ages = ages.sorted(by: {(lhs: Int, rhs : Int) -> Bool in lhs > rhs})
+ages
+ages = ages.sorted(by: {(lhs: Int, rhs : Int) -> Bool in lhs < rhs})
+ages
 ages.sorted(by: >)
 ages.sorted(by: <)
+
 
 func doAddition(
     on value: Int,
@@ -56,5 +63,3 @@ doAddition(on: 20, using: add10To(_: )
            
 doAddition(on: 20, using: add23To(_: )
 )
-
-
