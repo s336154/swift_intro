@@ -49,6 +49,8 @@ protocol HasName {
 }
 
 extension HasName {
+    
+//returning String make  the function print return value when used/
     func describeMe() -> String {
         "Your name is \(name) and you are \(age) years old"
     }
@@ -86,8 +88,6 @@ woof.age
 woof.describeMe()
 
 
-
-
 protocol Vehicle {
     var speed: Int { get set}
     mutating func increaseSpeed(by value: Int)
@@ -110,6 +110,9 @@ class Bike: Vehicle {
     }
 } */
 
+
+//  Structures do not change objects values when assigned to other objects but classes do change the values
+
 struct Bike: Vehicle {
     var speed: Int
     init() {
@@ -124,6 +127,9 @@ bike.increaseSpeed(by: 10)
 bike.speed
 
 func describe(obj: Any){
+    
+// "is" is only used in protocol to check whether objects conform to a protocol
+    
     if obj is Vehicle {
         "obj conforms to Vehicle protocol"
     } else {
@@ -136,6 +142,9 @@ describe(obj: bike)
 
 func increaseSpeedIfVehicle(
     objec: Any){
+        
+// by using syntax "as?" we are allowed to use methods of protocol
+        
         if var vehicle = objec as? Vehicle {
             vehicle.speed
             vehicle.increaseSpeed(by: 10)
@@ -146,3 +155,5 @@ func increaseSpeedIfVehicle(
     }
 increaseSpeedIfVehicle(objec: bike)
 bike.speed
+
+//  Structures do not change objects values when assigned to other objects but classes do change the values
