@@ -66,30 +66,53 @@ enum Shortcut {
 
 let wwwApple = Shortcut.wwwUrl(path: URL(string: "https://apple.com")!)
 
+//switch wwwApple {
+//case let .fileOrFolder(
+//    path:  path0,
+//    name:  name0
+//):
+//    path0
+//    name0
+//    break
+//
+//case  let .wwwUrl(
+//    path: path1
+//):
+//    path1
+//    break
+//
+//case .song(
+//    artist: let artist2,
+//    songName: let songName2
+//):
+//    artist2
+//    songName2
+//    break
+//}
+
 switch wwwApple {
 case let .fileOrFolder(
-    path:  path0,
-    name:  name0
+    path,
+    name
 ):
-    path0
-    name0
+    path
+    name
     break
     
 case  let .wwwUrl(
-    path: path1
+    path
 ):
-    path1
+    path
     break
     
-case .song(
-    artist: let artist2,
-    songName: let songName2
+case let .song(
+    artist,
+    songName
 ):
-    artist2
-    songName2
+    artist
+    songName
     break
 }
-
 
 //if case let .wwwURL(path) = wwwApple {
 //    path
