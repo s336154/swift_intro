@@ -135,8 +135,8 @@ describe(obj: bike)
 
 
 func increaseSpeedIfVehicle(
-    obj: Any){
-        if var vehicle = obj as? Vehicle {
+    objec: Any){
+        if var vehicle = objec as? Vehicle {
             vehicle.speed
             vehicle.increaseSpeed(by: 10)
             vehicle.speed
@@ -144,5 +144,5 @@ func increaseSpeedIfVehicle(
             "This is NOT a vehicle"
         }
     }
-increaseSpeedIfVehicle(obj: bike)
+increaseSpeedIfVehicle(objec: bike)
 bike.speed
