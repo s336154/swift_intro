@@ -84,6 +84,8 @@ class Tesla {
     let year: Int
     
     init() {
+        
+        // default value for Tesla
         self.model = "X"
         self.year = 2023
     }
@@ -97,9 +99,11 @@ class Tesla {
     }
     
     convenience init(
+        // model name will only be designated
         model: String
     ) {
         self.init(
+            // year os by default 2023
             model: model,
             year: 2023
         )
