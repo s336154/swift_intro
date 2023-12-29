@@ -59,6 +59,7 @@ let car = Car()
 car.goVroom()
 
 class Person2 {
+// you can not change age by this method: baz.age += 1
     private(set) var age: Int
     init(age: Int) {
         self.age = age
@@ -106,7 +107,7 @@ class Tesla {
 }
 
 
-class TeslaModel: Tesla {
+class TeslaModelY: Tesla {
     
    override init() {
        super.init(
@@ -118,7 +119,7 @@ class TeslaModel: Tesla {
 }
 
 
-let modelY = TeslaModel()
+let modelY = TeslaModelY()
 modelY.model
 modelY.year
 modelY.manufacturer
@@ -142,6 +143,7 @@ class MyClass {
     }
     
     func doSomething() {
+        "Do something .. "
         
     }
     
