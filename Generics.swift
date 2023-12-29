@@ -2,8 +2,6 @@ import Foundation
 import CoreGraphics
 
 
-
-
 let x = 10
 let y = 20
 let z = x * y
@@ -136,6 +134,9 @@ struct Table: View {
 /* struct Person {
     let name: String
 } */
+
+
+// Protocols can become generics using associatedtype
 
 protocol PresentableAsView {
     associatedtype ViewType: View
