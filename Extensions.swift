@@ -2,7 +2,7 @@ import Foundation
 
 extension Int {
     func plusTwo() -> Int {
-        self
+    //    self
    return  self + 2
     }
 }
@@ -19,6 +19,8 @@ struct Person {
 extension Person {
     init(fullName: String){
         let components  = fullName.components(separatedBy: " ")
+        
+// "??" is similar to otherwise in this example
         self.init(
             firstName: components.first ??  fullName,
             lastName: components.last ?? fullName
@@ -84,4 +86,3 @@ extension GoesVroom {
 
 
 modelX.goVroomVroomEvenMore()
-
