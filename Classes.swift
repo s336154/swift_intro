@@ -129,8 +129,6 @@ modelY.year
 modelY.manufacturer
 
 
-
-
 let fooBar = Person2(age: 20)
 fooBar.age
 func doSomething(with person: Person2) {
