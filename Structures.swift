@@ -63,10 +63,11 @@ immutableCar.currentSpeed
 
 
 var mutableCar = Car(currentSpeed: 12)
+
 let copy = mutableCar
+// copy.drive(speed: 67)
 
 mutableCar.drive(speed: 16)
-
 mutableCar.currentSpeed
 copy.currentSpeed
 
