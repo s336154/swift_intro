@@ -101,6 +101,7 @@ jumpAndRun(person)
 
 
 extension [String] {
+// "?" means it can be the value or a lack of a value so it is optional as the array tested  on can possibly be empty
     func longestString() -> String? {
         self.sorted { (lhs: String, rhs: String) -> Bool in lhs.count > rhs.count
         }.first
@@ -139,6 +140,8 @@ struct Table: View {
 // Protocols can become generics using associatedtype
 
 protocol PresentableAsView {
+
+    //this generic type must conform to "View" protocol
     associatedtype ViewType: View
     func produceView() -> ViewType
     func configure(
@@ -181,7 +184,7 @@ struct MyButton: PresentableAsView {
 
 extension PresentableAsView  {
     func doSomethingWithView() {
-        "This is a button"
+        "This is a view"
     }
 }
 
