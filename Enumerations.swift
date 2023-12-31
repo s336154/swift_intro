@@ -57,7 +57,6 @@ func describeAnimal(_ animal0: Animals) {
 describeAnimal(Animals.rabbit)
 
 
-
 enum Shortcut {
     case fileOrFolder(path: URL, name: String)
     case wwwUrl(path: URL)
@@ -118,11 +117,11 @@ case let .song(
 //    path
 //}
 
-let withoutYou = Shortcut.song(
+let withoutYou0 = Shortcut.song(
     artist: "Symphony X",
     songName: "Without You")
 
-if case let .song(_, songName) = withoutYou {
+if case let .song(_, songName) = withoutYou0 {
     songName
 }
 
@@ -130,7 +129,9 @@ if case let .song(_, songName) = withoutYou {
 enum Vehicle {
     case car(manufacturer: String, model: String)
     case bike(manufacturer: String, Yearmade: Int)
+ 
     
+// we did the same for struct fullname
     var Manufacturer: String{
         switch self {
         case let .car(manufacturer, _),
@@ -178,6 +179,7 @@ enum FavoriteEmoji: String, CaseIterable {
     case fire = "🔥"
 }
 
+
 FavoriteEmoji.allCases
 FavoriteEmoji.allCases.map(\.rawValue)
 FavoriteEmoji.blush.rawValue
@@ -195,7 +197,6 @@ if let snow = FavoriteEmoji(rawValue: "❄️") {
 } else {
     "As expected, snow doesn't exist"
 }
-
 
 
 enum Height {
