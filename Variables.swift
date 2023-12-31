@@ -2,12 +2,14 @@ import Foundation
 
 
 var Sari = ["Sari", "Siraj", "Abdalla", "Ali"]
-let copy = Sari
+var copy = Sari
 Sari.append("Abdalla")
 let Mother = "Jamila"
 Sari.append(Mother)
 Sari.remove(at: 4)
 Sari
+copy
+
 
 let oldArray = NSMutableArray(
     array: [
@@ -49,4 +51,3 @@ let message = age >= 30 ? "You are an adult" : "You are not an adult yet"
 message
 
 type(of: message)
-
