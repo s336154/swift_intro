@@ -32,6 +32,8 @@ c64.manufacturer
 struct Person2 {
     let firstname: String
     let lastname: String
+    
+// we did something similar to the for enum Vehicle
     var fullname: String {
         "\(firstname) \(lastname)"
     }
