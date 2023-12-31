@@ -1,6 +1,9 @@
 import Foundation
 
+//value is optional that by default is nil
 func multiplyByTwo(_ value: Int? = nil) -> Int {
+    
+// if value is present and not equal to "nil"
     if let value {
         return value * 2
     } else {
@@ -13,6 +16,7 @@ multiplyByTwo(6)
 multiplyByTwo(nil)
 multiplyByTwo(8)
 
+//age is optional that by default is nil
 let age: Int? = nil
 if age != nil {
     "Age is there! How odd!"
@@ -20,6 +24,7 @@ if age != nil {
     "Age is nil. Correct"
 }
 
+// if age is present and not equal to "nil"
 if let age {
     "Age is there. How odd! Its value is \(age)"
     
@@ -28,10 +33,10 @@ if let age {
     }
 
 func checkAge() {
-    if age == nil {
-        "Age is nil as expected"
-        return
-    }
+//    if age == nil {
+//        "Age is nil as expected"
+//        return
+//    }
     
     guard age != nil else {
         " Age is nil as expected"
@@ -44,7 +49,7 @@ func checkAge() {
 checkAge()
 
 
-let age2: Int? = 0
+let age2: Int? = nil
 
 func checkAge2() {
     guard let age2 else {
@@ -84,6 +89,9 @@ if age2 == .some(0) {
 
 
 struct Person {
+    
+//Address is optional here and within it (its structure) there is an optional property
+    
     let name: String
     let address: Address?
     
@@ -102,7 +110,7 @@ if let fooFirstAddressLine = foo.address?.firstLine {
 }
 
 
-
+// this is how we can grab the firstline of the address
 if let fooAddress = foo.address,
    let firstLine = fooAddress.firstLine {
     fooAddress
@@ -166,5 +174,3 @@ func getFullName2(
 getFullName(firstName: "Foo", lastName: nil)
  
 getFullName(firstName: "Foo", lastName: "Bar")
-
-
