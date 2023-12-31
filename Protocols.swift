@@ -145,6 +145,8 @@ func increaseSpeedIfVehicle(
         
 // by using syntax "as?" we are allowed to use methods of protocol
         
+// this looks a bit like "as!" method we used in variables lesson in the NSMutableArray
+        
         if var vehicle = objec as? Vehicle {
             vehicle.speed
             vehicle.increaseSpeed(by: 10)
@@ -153,6 +155,8 @@ func increaseSpeedIfVehicle(
             "This is NOT a vehicle"
         }
     }
+
+// this func is actually just testing using if and else methods and there is no real change in actual value
 increaseSpeedIfVehicle(objec: bike)
 bike.speed
 
